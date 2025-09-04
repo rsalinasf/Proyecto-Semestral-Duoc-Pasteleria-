@@ -14,7 +14,7 @@
         </div>
         <nav>
             <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
+            <a href="#third">Nosotros</a>
             <a href="#">Productos</a>
             <a href="#">Contacto</a>
         </nav>
@@ -37,13 +37,13 @@
     <div class="slide" style="background-image:url('img/2.jpg')">
       <div class="overlay">
         <h1>Récord Guinness 1995</h1>
-        <p>Colaboramos en la torta más grande del mundo</p>
+        <p>Colaboramos en el récord Guinness de la torta más grande del mundo!</p>
       </div>
     </div>
     <div class="slide" style="background-image:url('img/3.jpg')">
       <div class="overlay">
         <h1>Compra online moderna</h1>
-        <p>Entrega rápida, calidad garantizada</p>
+        <p>Entrega rápida, calidad garantizada. Ofrecemos una Experiencia inolvidable!</p>
       </div>
     </div>
   </div>
@@ -51,24 +51,52 @@
   <div class="dots"></div>
 </section>
 
-<section id="third" class="sweet">
-  <!-- Glaseado superior -->
-  <div class="frosting top"></div>
 
-  <div class="inner">
+<section id="third" class="cake-section">
+  <div class="topper">
+    <h1>Nuestra Misión y Visión</h1>
+  </div>
+
+  <div class="layer mission">
+    <h3>Misión ✨</h3>
+    <p>
+      Ofrecer una experiencia dulce y memorable a nuestros clientes, proporcionando tortas y productos
+      de repostería de alta calidad para todas las ocasiones, mientras celebramos nuestras raíces
+      históricas y fomentamos la creatividad en la repostería.
+    </p>
+  </div>
+
+  <div class="layer vision">
+    <h3>Visión 🎂</h3>
+    <p>
+      Convertirnos en la tienda online líder de productos de repostería en Chile, conocida por nuestra
+      innovación, calidad y el impacto positivo en la comunidad, especialmente en la formación de nuevos
+      talentos en gastronomía.
+    </p>
+  </div>
+
+  <div class="plate" aria-hidden="true"></div>
+</section>
+
+
+
+
+
+<section id="fourth" class="sweet">
+
+
+  <div class="tit">
     <h2>Tradición Dulce, Hecha a Mano</h2>
     <p class="sub">
       50 años creando tortas y postres con recetas familiares, ingredientes nobles y mucho cariño.
     </p>
 
-    <!-- Badges “valores” -->
     <ul class="badges">
       <li>🍓 Ingredientes naturales</li>
       <li>🎂 Personaliza tu torta</li>
       <li>🚚 Entrega el mismo día*</li>
     </ul>
 
-    <!-- Galería simple (usa tus imágenes) -->
     <div class="gallery">
       <div class="pic" style="background-image:url('img/1.jpg')"></div>
       <div class="pic" style="background-image:url('img/2.jpg')"></div>
@@ -76,13 +104,52 @@
     </div>
 
     <a href="#productos" class="btn">Ver catálogo</a>
-    <small class="note">* Consultar cobertura por comuna.</small>
+    <small class="note">* Visualiza los ingredientes</small>
   </div>
 
-  <!-- Glaseado inferior -->
-  <div class="frosting bottom"></div>
 </section>
 
+<section id="contacto">
+    <div>
+        <h2>Contacto</h2>
+    </div>
+  <div class="contacto-container">
+    <!-- Formulario -->
+    <form class="contacto-form">
+      <input type="text" name="nombre" placeholder="Nombre" required />
+      <input type="number" name="telefono" placeholder="Teléfono" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea type="text" name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+      <button type="submit">ENVIAR</button>
+    </form>
+
+    <!-- Mapa de Google -->
+    <div class="contacto-mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.064576830402!2d-71.12631320891511!3d-33.51699510961355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662f6dc6c69cac5%3A0xd42792a05e80e08b!2sI.%20Municipalidad%20de%20Mar%C3%ADa%20Pinto!5e1!3m2!1ses!2scl!4v1752766323839!5m2!1ses!2scl"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+        <div>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Contáctanos</a>
+        </div>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+</footer>
 
 
 <script src="main.js"></script>

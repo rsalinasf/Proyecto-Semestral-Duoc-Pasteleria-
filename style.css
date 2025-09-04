@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 *{
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 
 
 #first {
@@ -145,11 +151,13 @@ header span{
 
 .overlay h1 {
   margin: 0 0 0.5rem;
-  font-size: 2rem;
+  font-size: 5rem;
+  
 }
 
 .overlay p {
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .dots {
@@ -175,74 +183,134 @@ header span{
 
 
 
-/* ===== Reset mínimo ===== */
-#third, #third * { box-sizing: border-box; }
-#third { margin: 0; }
+:root{
+  --crema:#fffaf4;
+  --rojoo:#b70e0e;
+  --ink:#2d2d2d;
+  --muted:#676767;
+}
 
-/* ===== Sección dulce ===== */
-.sweet {
+/* Sección “torta” */
+.cake-section{
   position: relative;
-  min-height: 100vh;
-  padding: 64px 20px 80px;
+  min-height: 90vh;
+  padding: 80px 18px 100px;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, #fffef9 0%, #fff4f6 100%); /* crema → rosado pastel */
+  gap: 16px;
+     background:
+    radial-gradient(3px 3px at 15% 25%, #ffd2dc 40%, transparent 42%) repeat,
+    radial-gradient(3px 3px at 75% 65%, #ffd98e 40%, transparent 42%) repeat,
+    radial-gradient(3px 3px at 35% 80%, #c6efdb 40%, transparent 42%) repeat,
+    linear-gradient(180deg, var(--crema) 0%, #fff4f7 100%);
+  text-align: center;
   overflow: hidden;
 }
 
-/* Glaseado (scallops) solo con CSS, sin SVG */
-.frosting {
-  position: absolute;
-  left: 0; width: 100%; height: 44px;
-  /* círculos repetidos que crean “onditas” */
-  background:
-    radial-gradient(22px 22px at 22px 22px, #ffffff 98%, transparent 100%) repeat-x;
-  background-size: 44px 44px;
-  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.05));
-  pointer-events: none;
-}
-.frosting.top   { top: -22px; transform: scaleY(-1); } /* ondulado hacia abajo */
-.frosting.bottom{ bottom: -22px; }                      /* ondulado hacia arriba */
-
-/* Contenido */
-.sweet .inner {
-  width: 100%;
-  max-width: 1100px;
-  text-align: center;
-  z-index: 1;
+/* Topper (título en una “chapita” con palito) */
+.cake-section .topper{
+  position: relative;
+  margin-bottom: 8px;
 }
 
-.sweet h2 {
-  margin: 0 0 10px;
-  font-size: clamp(22px, 3.2vw, 36px);
-  color: #b70e0e; /* tono frambuesa */
+.cake-section h1{
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: clamp(28px, 4.2vw, 56px);
+  color: #fff;
+  background: #f0ad77;
+  padding: 10px 22px;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(183,14,14,.18);
 }
 
-.sweet .sub {
+/* Capas (cards) con glaseado que chorrea, solo CSS */
+.cake-section .layer{
+  position: relative;
+  width: min(900px, 92vw);
+  margin: 22px auto 0;
+  padding: 28px 22px;
+  border-radius: 18px;
+  border: 2px solid #f0ad77;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 10px 28px rgba(0,0,0,.06);
+  color: var(--muted);
+}
+
+
+.cake-section .layer h3{
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 22px;
+}
+.cake-section .layer p{
+  margin: 0;
+  line-height: 1.75;
+  text-align: justify;
+  color: var(--muted);
+}
+
+
+
+
+
+
+
+
+
+#fourth{
+    position: relative;
+    min-height: 100vh;
+    padding: 64px 20px 80px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #fffef9 0%, #fff4f6 100%);
+    overflow: hidden;
+}
+
+#fourth .tit {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+
+}
+
+#fourth h2 {
+    margin: 0 0 10px;
+    font-size: 60px;
+    color: #f0ad77; 
+    font-weight: 500;
+    font-family: "Pacifico", cursive;
+
+}
+
+#fourth .sub {
   margin: 0 auto 24px;
   max-width: 760px;
   color: #555;
-  line-height: 1.6;
-  font-size: 16px;
+  font-size: 14px;
 }
 
-/* Badges */
+
 .badges {
   list-style: none;
   padding: 0; margin: 0 auto 28px;
   display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
 }
+
 .badges li {
   background: #fff;
   border: 1px solid #ffe1e7;
-  color: #b70e0e;
+  color: #f0ad77;
   padding: 10px 14px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
 }
 
-/* Galería simple (tarjetas rotadas un poquito) */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 260px));
@@ -250,6 +318,7 @@ header span{
   justify-content: center;
   margin: 10px auto 26px;
 }
+
 .pic {
   aspect-ratio: 4/3;
   background: #fff center/cover no-repeat;
@@ -259,15 +328,15 @@ header span{
   transform: rotate(var(--r, 0deg));
   transition: transform .2s ease;
 }
+
 .pic:nth-child(1){ --r: -2.5deg; }
 .pic:nth-child(2){ --r:  1.5deg; }
 .pic:nth-child(3){ --r: -1.0deg; }
 .pic:hover { transform: rotate(0deg) scale(1.01); }
 
-/* Botón */
 .btn {
   display: inline-block;
-  background: #b70e0e;
+  background: #f0ad77;
   color: #fff; text-decoration: none;
   padding: 12px 18px;
   border-radius: 10px;
@@ -283,11 +352,155 @@ header span{
   font-size: 12px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .gallery { grid-template-columns: 1fr 1fr; }
+
+
+
+
+
+
+
+#contacto {
+  background: white;
+  min-height: 90vh;
+  text-align: center;
 }
-@media (max-width: 600px) {
-  .gallery { grid-template-columns: 1fr; }
-  .badges li { font-size: 13px; }
+
+#contacto > div{
+    display: flex;
+    justify-content: center;
+}
+
+
+#contacto h2{
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: clamp(28px, 4.2vw, 56px);
+    color: #fff;
+    background: #f0ad77;
+    padding: 10px 22px;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(183,14,14,.18);
+    margin-top: 2rem;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 6rem auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 0px;
+}
+
+.contacto-form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f0ad77;
+  padding: 40px;
+  border-radius: 0px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Gob_CL', sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+
+.contacto-form button {
+  background-color: #7f4f21;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.contacto-form button:hover {
+  background-color: #d4be00;
+}
+
+.contacto-mapa {
+  flex: 1 1 400px;
+  min-height: 400px;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+
+
+
+
+footer {
+  background: linear-gradient(180deg, #fff 0%, #ffe1e7 100%);
+  padding: 28px 16px;
+  border-top: 3px dashed #f5c2cb; /* detalle dulce */
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+footer .footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #b70e0e;
+  font-weight: 500;
+}
+
+/* enlaces de políticas */
+footer .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer .links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #444;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+footer .links a:hover {
+  background: #fff;
+  color: #b70e0e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* redes sociales */
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer .social a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b70e0e;
+  transition: opacity 0.2s ease;
+}
+footer .social a:hover {
+  opacity: 0.7;
 }
