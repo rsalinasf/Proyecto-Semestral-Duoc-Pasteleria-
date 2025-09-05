@@ -12,13 +12,15 @@ html {
 
 
 
+/* ------- Navbar --------- */
+
+
 
 #first {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f8f8f8;
-    
 }
 
 
@@ -45,12 +47,7 @@ html {
     
 
 
-#first a{
-    color: rgba(0, 0, 0, 0.712);
-    animation: aparece 2s;
-    transition: ease 0.3s;
-    font-family: "Poppins", sans-serif;
-}
+
 
 #first a:hover{
     color: #ffc38f;
@@ -80,12 +77,14 @@ a {
     text-decoration: none;
     border-radius: 30px;
     background-color: #fdd0a8dc;
-    color: rgb(0, 0, 0);
     padding: 6px 10px;
-    transition: ease 0.3s;
     text-transform: uppercase;
-    font-size: 12px !important;
+    font-size: 11px !important;
     font-weight: 600;
+    color: rgba(0, 0, 0, 0.712);
+    animation: aparece 2s;
+    transition: ease 0.3s;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -95,7 +94,7 @@ a {
 }
 
 header span{
-    font-size: 80px;
+    font-size: 23px !important;
     color: rgb(0, 0, 0);
     transition: ease 0.3s;
 }
@@ -115,11 +114,15 @@ header span{
 
 
 
+/* ------- Seccion Carousel --------- */
+
+
 .carousel {
   position: relative;
   width: 100%;
   height: 80vh;      
   overflow: hidden;
+  animation: aparece 2s;
 }
 
 .slides {
@@ -180,6 +183,11 @@ header span{
 .dots .active {
   background: #fff;
 }
+
+
+
+
+/* ------- Seccion Misión y Visión --------- */
 
 
 
@@ -257,6 +265,7 @@ header span{
 
 
 
+/* ------- Sección Catalogo --------- */
 
 
 
@@ -335,15 +344,19 @@ header span{
 .pic:hover { transform: rotate(0deg) scale(1.01); }
 
 .btn {
-  display: inline-block;
-  background: #f0ad77;
-  color: #fff; text-decoration: none;
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: 700;
-  box-shadow: 0 6px 16px rgba(183,14,14,0.18);
+    display: inline-block;
+    background: #f0ad77;
+    color: #fff; text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(183,14,14,0.18);
+    transition: .2s ease;
 }
-.btn:hover { opacity: .95; }
+.btn:hover { 
+    opacity: .95;
+    transform: scale(1.1);
+}
 
 .note {
   display: block;
@@ -356,6 +369,7 @@ header span{
 
 
 
+/* ------- Contacto --------- */
 
 
 
@@ -439,68 +453,198 @@ header span{
 
 
 
-
+/* ------- footer --------- */
 
 footer {
-  background: linear-gradient(180deg, #fff 0%, #ffe1e7 100%);
   padding: 28px 16px;
-  border-top: 3px dashed #f5c2cb; /* detalle dulce */
+  border-top: 2px dashed #f5c2cb; 
   font-family: "Poppins", sans-serif;
-  text-align: center;
+  background-color: #f2dfe3;
 }
 
-footer .footer-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.footer-content{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-around;
+    align-items: center;
 }
 
-footer p {
-  margin: 0;
+.footer-content p {
+    font-size: 16px;
+}
+
+.footer-content > div{
+    display: flex;
+    gap: 9px;
+    font-size: 30px;
+    width: 120px;
+}
+
+.footer-content > div > :nth-child(1){
+    color: #3b5998;
+    transition: ease 0.3s;
+}
+.footer-content > div > :nth-child(1):hover{
+    transform: scale(1.2);
+    padding: 0 5px;
+}
+
+.footer-content > div > :nth-child(2){
+    color: #ff385c;
+    transition: ease 0.3s;
+}
+
+.footer-content > div > :nth-child(2):hover{
+    transform: scale(1.2);
+    padding: 0 5px;
+}
+.footer-content > div > :nth-child(3){
+    color: #25d366;
+    transition: ease 0.3s;
+}
+
+.footer-content > div > :nth-child(3):hover{
+    transform: scale(1.2);
+    padding: 0 5px;
+}
+
+
+
+/* ------- Estilos de errores y Arreglos de input --------- */
+
+
+
+/* Quita las flechas del input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+
+
+/* Errores */
+.error {
+    border: 2px solid rgba(255, 0, 0, 0.7); 
+    background-color: rgba(255, 0, 0, 0.1);   
+    border-radius: 6px;                       
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.4); 
+    transition: all 0.3s ease;               
+}
+
+
+.error:focus {
+    border-color: #ff0000;                    
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6); 
+    background-color: rgba(255, 0, 0, 0.15);  
+}
+
+
+#mensaje {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: #ef4444;      
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: none;         
+  z-index: 9999;
   font-size: 14px;
-  color: #b70e0e;
-  font-weight: 500;
 }
 
-/* enlaces de políticas */
-footer .links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+#mensaje.ok {
+  background: #22c55e;   
 }
 
-footer .links a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #444;
-  padding: 6px 10px;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
-footer .links a:hover {
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateX(-50%) translateY(0); }
+  to   { opacity: 0; transform: translateX(-50%) translateY(20px); }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Base: oculto por defecto --- */
+.modal {
+  position: fixed;
+  inset: 0;                 /* top:0 right:0 bottom:0 left:0 */
+  display: none;            /* se muestra con .is-open */
+  z-index: 9999;            /* por encima de todo */
+}
+
+/* oscurece el fondo */
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+}
+
+/* caja centrada */
+.modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 92vw);
+  margin: 8vh auto 0;
   background: #fff;
-  color: #b70e0e;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  padding: 18px 18px 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  /* animación simple */
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
 }
 
-/* redes sociales */
-footer .social {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+/* botón cerrar */
+.modal__close {
+  position: absolute; top: 8px; right: 8px;
+  background: #ffe1e7; color: #b70e0e;
+  border: 1px solid #ffd0da;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
 }
 
-footer .social a {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: #b70e0e;
-  transition: opacity 0.2s ease;
+/* formulario mínimo */
+.form { display: grid; gap: 12px; margin-top: 8px; }
+.form label { display: grid; gap: 6px; font-size: 14px; color: #333; }
+.form input {
+  padding: 10px 12px; border-radius: 10px;
+  border: 1px solid #e6e6e6; outline: none;
 }
-footer .social a:hover {
-  opacity: 0.7;
+.form input:focus { border-color: #b70e0e; box-shadow: 0 0 0 3px #ffe8ed; }
+
+.btn {
+  background: #b70e0e; color:#fff; border:0;
+  padding: 10px 14px; border-radius: 10px; font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- Estado abierto --- */
+.modal.is-open { display: block; }
+.modal.is-open .modal__dialog { transform: translateY(0); opacity: 1; }
+
+/* opcional: bloquear scroll de fondo */
+body.modal-open { overflow: hidden; }
+
+form > div{
+    text-align: center;
+    margin-top: 10px;
+}
+
+form > div > p > a{
+    text-decoration: none;
+    color: #b70e0e;
+    font-weight: 600;
+    transition: ease 0.3s;
 }
