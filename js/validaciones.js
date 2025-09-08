@@ -6,60 +6,59 @@ const nombreR = document.getElementById('nombreR');
 const emailR = document.getElementById('emailR');
 const passR = document.getElementById('passR');
 
-// Validaciones para el formulario de Login y Registro ( Keyup )
 
-emailL.addEventListener('keyup', function(e){
-    if(emailL.value.length < 8 || !emailL.value.includes("@")){
+emailL.addEventListener('keyup', function (e) {
+    if (emailL.value.length < 8 || !emailL.value.includes("@")) {
         emailL.classList.add("error")
-    }else{
+    } else {
         emailL.classList.remove("error")
     }
 });
 
-passL.addEventListener('keyup', function(e){
-    if(passL.value.length < 6){
+passL.addEventListener('keyup', function (e) {
+    if (passL.value.length < 6) {
         passL.classList.add("error")
-    }else{
+    } else {
         passL.classList.remove("error")
     }
 });
 
-nombreR.addEventListener('keyup', function(e){
-    if(nombreR.value.length < 5){
+nombreR.addEventListener('keyup', function (e) {
+    if (nombreR.value.length < 5) {
         nombreR.classList.add("error")
-    }else{
+    } else {
         nombreR.classList.remove("error")
     }
 });
 
-emailR.addEventListener('keyup', function(e){
-    if(emailR.value.length < 8 || !emailR.value.includes("@")){
+emailR.addEventListener('keyup', function (e) {
+    if (emailR.value.length < 8 || !emailR.value.includes("@")) {
         emailR.classList.add("error")
-    }else{
+    } else {
         emailR.classList.remove("error")
     }
 });
 
-passR.addEventListener('keyup', function(e){
-    if(passR.value.length < 6){
+passR.addEventListener('keyup', function (e) {
+    if (passR.value.length < 6) {
         passR.classList.add("error")
-    }else{
+    } else {ß
         passR.classList.remove("error")
     }
 });
 
-// Validaciones para el Boton Submit de Login y Registro
 
-formLogin.addEventListener("submit", async function(e){
+
+formLogin.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    if(emailL.value.length < 8 || !emailL.value.includes("@")){
+    if (emailL.value.length < 8 || !emailL.value.includes("@")) {
         mostrarMensaje("El email debe contener almenos 8 caracteres y un @!!")
-    return
+        return
     }
-    if(passL.value.length < 6){
+    if (passL.value.length < 6) {
         mostrarMensaje("La contraseña debe contener almenos 6 caracteres!!")
-    return
+        return
     }
 
     mostrarMensaje("Inicio de sesión exitoso!!", "ok");
@@ -67,20 +66,20 @@ formLogin.addEventListener("submit", async function(e){
     formLogin.submit();
 });
 
-formRegister.addEventListener("submit", async function(e){
+formRegister.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    if(nombreR.value.length < 5){
+    if (nombreR.value.length < 5) {
         mostrarMensaje("El nombre debe contener almenos 5 caracteres!!")
-    return
+        return
     }
-    if(emailR.value.length < 8 || !emailR.value.includes("@")){
+    if (emailR.value.length < 8 || !emailR.value.includes("@")) {
         mostrarMensaje("El email debe contener almenos 8 caracteres y un @!!")
-    return
+        return
     }
-    if(passR.value.length < 6){
+    if (passR.value.length < 6) {
         mostrarMensaje("La contraseña debe contener almenos 6 caracteres!!")
-    return
+        return
     }
 
     mostrarMensaje("Registro exitoso!!", "ok");

@@ -1,8 +1,7 @@
 
 
-// Mensajes de Error
 
-function mostrarMensaje(texto, tipo="error") {
+function mostrarMensaje(texto, tipo = "error") {
   var msg = document.getElementById('mensaje');
   if (!msg) return;
 
@@ -26,7 +25,6 @@ function mostrarMensaje(texto, tipo="error") {
 }
 
 
-// Funcion para esperar el envio del form
 
 function esperar(ms) {
   return new Promise(function (resolve) {

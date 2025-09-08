@@ -1,5 +1,4 @@
 
-//Carousel
 
 let slides = document.querySelectorAll(".slide");
 let track = document.querySelector(".slides");
@@ -22,7 +21,7 @@ function cambiarSlide() {
     index = 0;
   }
   track.style.transform = "translateX(-" + (index * 100) + "%)";
-  
+
   for (let i = 0; i < dots.length; i++) {
     dots[i].classList.remove("active");
   }
