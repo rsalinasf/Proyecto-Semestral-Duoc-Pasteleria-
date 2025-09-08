@@ -32,7 +32,7 @@ html {
 }
 
 #first>div .logo{
-    background-image: url(./img/Mil\ Sabores.png);
+    background-image: url(../img/Mil\ Sabores.png);
     background-size: cover;
     width: 100px;
     height: 100px;
@@ -196,7 +196,7 @@ header span{
   --muted:#676767;
 }
 
-/* Sección “torta” */
+
 .cake-section{
   position: relative;
   min-height: 90vh;
@@ -213,7 +213,6 @@ header span{
   overflow: hidden;
 }
 
-/* Topper (título en una “chapita” con palito) */
 .cake-section .topper{
   position: relative;
   margin-bottom: 8px;
@@ -231,7 +230,7 @@ header span{
   box-shadow: 0 10px 24px rgba(183,14,14,.18);
 }
 
-/* Capas (cards) con glaseado que chorrea, solo CSS */
+
 .cake-section .layer{
   position: relative;
   width: min(900px, 92vw);
@@ -341,7 +340,7 @@ header span{
 .pic:nth-child(3){ --r: -1.0deg; }
 .pic:hover { transform: rotate(0deg) scale(1.01); }
 
-.btn {
+#fourth > .tit >.btn {
     display: inline-block;
     background: #f0ad77;
     color: #fff; text-decoration: none;
@@ -351,7 +350,7 @@ header span{
     box-shadow: 0 6px 16px rgba(183,14,14,0.18);
     transition: .2s ease;
 }
-.btn:hover { 
+#fourth > .tit >.btn:hover { 
     opacity: .95;
     transform: scale(1.1);
 }
@@ -387,7 +386,7 @@ header span{
     margin: 0;
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    font-size: clamp(28px, 4.2vw, 56px);
+    font-size: clamp(28px, 3.2vw, 56px);
     color: #fff;
     background: #f0ad77;
     padding: 10px 22px;
@@ -397,11 +396,8 @@ header span{
 }
 
 .contacto-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 6rem auto;
+  max-width: 1000px;
+  margin: 4rem auto;
   background-color: white;
   padding: 20px;
   border-radius: 0px;
@@ -455,9 +451,9 @@ header span{
 
 footer {
   padding: 28px 16px;
-  border-top: 2px dashed #f5c2cb; 
+  border-top: 2px dashed #fff8fa; 
   font-family: "Poppins", sans-serif;
-  background-color: #f2dfe3;
+  background-color: #fed4a5;
 }
 
 .footer-content{
@@ -554,13 +550,25 @@ input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateX(-50%) translateY(20px); 
+  }
+  to   { 
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; transform: translateX(-50%) translateY(0); }
-  to   { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  from { 
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+  }
+  to   { 
+    opacity: 0; 
+    transform: translateX(-50%) translateY(20px); 
+  }
 }
 
 
@@ -568,26 +576,28 @@ input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
 
 
 
+/* ------- Modal Inicio de Sesiones o Registro --------- */
 
 
 
 
-/* --- Base: oculto por defecto --- */
+
+
 .modal {
   position: fixed;
-  inset: 0;                 /* top:0 right:0 bottom:0 left:0 */
-  display: none;            /* se muestra con .is-open */
-  z-index: 9999;            /* por encima de todo */
+  inset: 0;                 
+  display: none;            
+  z-index: 9999;            
 }
 
-/* oscurece el fondo */
+
 .modal__backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,.45);
 }
 
-/* caja centrada */
+
 .modal__dialog {
   position: relative;
   z-index: 1;
@@ -597,13 +607,11 @@ input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
   border-radius: 14px;
   padding: 18px 18px 20px;
   box-shadow: 0 20px 60px rgba(0,0,0,.25);
-  /* animación simple */
   transform: translateY(-10px);
   opacity: 0;
   transition: transform .2s ease, opacity .2s ease;
 }
 
-/* botón cerrar */
 .modal__close {
   position: absolute; top: 8px; right: 8px;
   background: #ffe1e7; color: #b70e0e;
@@ -613,27 +621,53 @@ input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
   cursor: pointer;
 }
 
-/* formulario mínimo */
-.form { display: grid; gap: 12px; margin-top: 8px; }
-.form label { display: grid; gap: 6px; font-size: 14px; color: #333; }
-.form input {
-  padding: 10px 12px; border-radius: 10px;
-  border: 1px solid #e6e6e6; outline: none;
+
+.form { 
+  display: grid; 
+  gap: 12px; 
+  margin-top: 8px; 
 }
-.form input:focus { border-color: #b70e0e; box-shadow: 0 0 0 3px #ffe8ed; }
+.form label { 
+  display: grid; 
+  gap: 6px; 
+  font-size: 14px; 
+  color: #333; 
+}
+
+.form input {
+  padding: 10px 12px; 
+  border-radius: 10px;
+  border: 1px solid #e6e6e6; 
+  outline: none;
+}
+.form input:focus { 
+  border-color: #b70e0e; 
+  box-shadow: 0 0 0 3px #ffe8ed; 
+}
 
 .btn {
-  background: #b70e0e; color:#fff; border:0;
-  padding: 10px 14px; border-radius: 10px; font-weight: 700;
+  background: #b70e0e; 
+  color:#fff; 
+  border:0;
+  padding: 10px 14px; 
+  border-radius: 10px; 
+  font-weight: 700;
   cursor: pointer;
 }
 
-/* --- Estado abierto --- */
-.modal.is-open { display: block; }
-.modal.is-open .modal__dialog { transform: translateY(0); opacity: 1; }
 
-/* opcional: bloquear scroll de fondo */
-body.modal-open { overflow: hidden; }
+.modal.is-open {
+   display: block; 
+}
+.modal.is-open .modal__dialog { 
+  transform: translateY(0); 
+  opacity: 1; 
+}
+
+
+body.modal-open {
+   overflow: hidden;
+}
 
 form > div{
     text-align: center;
