@@ -41,7 +41,7 @@ document.getElementById('goLogin')?.addEventListener('click', e => {
 document.querySelectorAll('.modal [data-close]').forEach(el => {
   el.addEventListener('click', () => closeModal(el.closest('.modal')));
 });
-ß
+
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {

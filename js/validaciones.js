@@ -42,7 +42,7 @@ emailR.addEventListener('keyup', function (e) {
 passR.addEventListener('keyup', function (e) {
     if (passR.value.length < 6) {
         passR.classList.add("error")
-    } else {ß
+    } else {
         passR.classList.remove("error")
     }
 });

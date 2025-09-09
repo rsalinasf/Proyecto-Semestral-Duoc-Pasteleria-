@@ -1,7 +1,4 @@
 
-
-
-
 const formularioCita = document.getElementById('formularioCita');
 const nombreC = document.getElementById('nombreC');
 const telefonoC = document.getElementById('telefonoC');
