@@ -61,6 +61,11 @@ formLogin.addEventListener("submit", async function (e) {
         return
     }
 
+    if(emailL.value.includes("duocuc.cl")){
+        mostrarMensaje("Tienes un descuento del 50% por ser estudiante de Duoc UC!!", "ok");
+        await esperar(2000);
+    }
+
     mostrarMensaje("Inicio de sesión exitoso!!", "ok");
     await esperar(2000);
     formLogin.submit();
@@ -77,9 +82,16 @@ formRegister.addEventListener("submit", async function (e) {
         mostrarMensaje("El email debe contener almenos 8 caracteres y un @!!")
         return
     }
+    
+
     if (passR.value.length < 6) {
         mostrarMensaje("La contraseña debe contener almenos 6 caracteres!!")
         return
+    }
+
+    if(emailR.value.includes("duocuc.cl")){
+        mostrarMensaje("Haz obtenido un descuento del 50% por ser estudiante de Duoc UC!!", "ok");
+        await esperar(2000);
     }
 
     mostrarMensaje("Registro exitoso!!", "ok");
